@@ -1,2 +1,2 @@
 # Block-Chain
-A simplest block chain implementation in golang
+A golang package with simplest block chain implementation
