@@ -245,39 +245,3 @@ func (bc * blockChain) VerifyChain() (bool) {
 	fmt.Printf("\n\n\t ::::::::::::::: Chain valid ::::::::::::::: \n\n")
 	return true
 }
-
-
-func main(){
-	
-	// create a new block chain
-	chain := new(blockChain)
-
-	// hard coded transaction
-	transaction := []string{"Alice sent to bob", "Trudy is here", "Another Transaction", "a small one"}
-
-	// adding the transaction to the block chain
-	for i:=0; i<len(transaction); i++ {
-		chain.AddBlock(transaction[i])
-	}
-	
-	// printing the block chain
-	fmt.Printf("\n\n\t ::::::::::::::: Initial Chain ::::::::::::::: \n\n")
-	chain.ListBlocks()
-
-	fmt.Printf("\n\n\t :::::::::::::: Changing Chain ::::::::::::::: \n\n")
-
-	// changing the block
-	chain.ChangeBlock() 
-
-	// printing the block chain
-	fmt.Printf("\n\n\t ::::::::::::::: Verifying Chain ::::::::::::::: \n\n")
-
-	// verifying the chain
-	if ( chain.VerifyChain() ){
-		chain.ListBlocks()
-	}
-
-	fmt.Println()
-	fmt.Println()
-	
-}
