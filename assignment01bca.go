@@ -245,3 +245,9 @@ func (bc * blockChain) VerifyChain() (bool) {
 	fmt.Printf("\n\n\t ::::::::::::::: Chain valid ::::::::::::::: \n\n")
 	return true
 }
+
+func InitiateBlockChain() *blockChain{
+	// creating a new block chain
+	bc := new(blockChain)
+	return bc
+}
